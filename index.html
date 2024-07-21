@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="Host Image Free" />
+    <meta
+      name="description"
+      content="host your image for free and get shareable link"
+    />
+    <link rel="icon" type="image/png" href="https://i.ibb.co/hRHkSc2/icon-1-11zon.png">
+    <meta name="keywords" content="image hosting, hosting,image,host" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="English" />
+    <meta name="author" content="Ranjan Kashayp" />
+  
+    <title>Upload Image</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script
+      defer
+      src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.min.css"
+    />
+  </head>
+  <body>
+    <form id="uploadForm" enctype="multipart/form-data">
+      <header>
+        <i class="bx bx-upload"></i>
+        <p>Upload Image</p>
+      </header>
+
+      <div class="upload-container">
+        <div class="img">
+          <i id="x" onclick="removeImg()" class="bx bx-x"></i>
+          <img
+            id="previewImg"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS75ebrwvgVW5Ks_oLfCbG8Httf3_9g-Ynl_Q&usqp=CAU"
+            alt=""
+          />
+        </div>
+        <div class="upload-content">
+          <i class="bx bx-cloud-upload"></i>
+          <p>Drag file to upload</p>
+          <p>or</p>
+          <label for="file">Browse</label>
+          <input id="file" type="file" required accept="image/*" />
+          <p>max size 30MB</p>
+        </div>
+
+        <dotlottie-player
+          class="progress"
+          src="https://lottie.host/0957794d-e1f9-4761-b502-76f419a5ff2c/y2QQeCyi1c.json"
+          background="transparent"
+          speed="1"
+          style="width: 100px; height: 300px"
+          loop
+          autoplay
+        ></dotlottie-player>
+        <!-- <div id="bar" class="bar"></div> -->
+      </div>
+      <div class="input_grp">
+        <label for="time">Delete after</label>
+        <select onchange="addExpirationTime(this)" name="" id="">
+          <option value="">Don't auto delete</option>
+          <option value="60">1 minute</option>
+          <option value="300">5 minutes</option>
+          <option value="600">10 minutes</option>
+          <option value="1800">30 minute</option>
+          <option value="3600">1 hour</option>
+          <option value="43200">12 hour</option>
+          <option value="86400">24 hour</option>
+          <option value="259200">3 days</option>
+          <option value="864000">10 days</option>
+          <option value="2592000">1 Month</option>
+          <option value="15552000">6 Month</option>
+          <option value="31536000">1 Year</option>
+        </select>
+      </div>
+      <div class="output-container">
+        <p id="url"></p>
+        <i id="cpy" class="bx bx-copy"></i>
+      </div>
+      <button id="submitBtn" disabled type="submit">Upload</button>
+    </form>
+    <footer>
+      <p>2024</p>
+      <p>Hosted by ranjan</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.7/dist/sweetalert2.all.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
