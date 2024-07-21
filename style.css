@@ -51,9 +51,9 @@ form header {
   flex-direction: column;
   position: relative;
   .bx {
-    font-size: 30px;
+    font-size: 40px;
     padding: 10px;
-    background-color: #f4efff;
+    background-color: #ff0a95;
     border-radius: 50%;
   }
 }
