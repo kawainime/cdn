@@ -38,7 +38,7 @@ document
     formData.append("image", imageFile);
     document.body.classList.add("upload");
     cancel.style.display = 'none'
-    let api = `https://api.imgbb.com/1/upload?${expirationTime}key=dbc263178e5cda48ca6b54a98e6c968e`
+    let api = `https://api.imgbb.com/1/upload?${expirationTime}key=1eac60d1327938c33f4ad85b6e3a3f6e`
 
     fetch(
       api,
@@ -59,8 +59,8 @@ document
     cancel.style.display = 'block'
 
           Swal.fire({
-  title: "Uploaded",
-  text: "click the copy button to copy imagelink",
+  title: "Terupload",
+  text: "Click (x) lalu salin tautan dibawah",
   icon: "success"
 });
         } else {
